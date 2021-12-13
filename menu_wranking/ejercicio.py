@@ -10,7 +10,7 @@
 # Cuando se introduzca la opción de menú [1], se invocará a la función carga_keywords(). La lista resultante se asignará a una variable del programa llamada keywords.
 # Cuando se introduzca la opción de menú [2], se mostrará el listado de palabras clave de 20 en 20, es decir, una vez mostradas 20 palabras clave, el usuario deberá pulsar la tecla enter para ver las siguientes.
 # Cuando se introduzca la opción de menú [0], el programa finalizará.
-from typing import Optional
+import os
 
 
 def muestra_menu():
@@ -46,6 +46,7 @@ def mostrar_keyword(keywords):
 
 
 def main():
+
     c_word=[]
     while True:
         muestra_menu()
@@ -54,8 +55,13 @@ def main():
             break
         elif opcion == 1:
             c_word=carga_keywords()
+            os.system("clear")
+
         elif opcion == 2:
-            mostrar_keyword(c_word)    
+            os.system("clear")
+            mostrar_keyword(c_word)   
+            
+            
         else: 
             print("opcion no valida")    
 

@@ -5,13 +5,22 @@
 
 
 def main():
-    number:int=int(input("type a number: "))
-    sum:int=lambda number: (number*(number+1))/2
-    total:int
-    for i in range(1, number+ 1):
-        total=sum(i)
+    try:
+        
+        number:int=int(input("type a number: "))
 
-    print(f'the sum of the numbers from 1 to {number} is {total} ')    
+        if number>0:
+
+            sum:int=(number*(number+1))/2
+        else: 
+            raise ("only positive number")
+
+        print(f'the sum of the numbers from 1 to {number} is {sum} ')  
+
+    except ValueError as ve:
+        print(ve)           
+    
+       
         
         
 

@@ -8,10 +8,8 @@ def main():
     weight=float(input("Enter you weight (Kg): "))
     height=float(input("Enter your height (m): "))
 
-    imc= imc_calcu(weight,height)
-
     try:
-        return print(f'you imc is: {round(imc,2)}')
+        print(f'you imc is: {str(imc_calcu(weight,height))}')
     except ValueError as ve:
         print(ve)
 
